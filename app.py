@@ -1,4 +1,4 @@
-
+#  - BY ISMAEL LEON
 import streamlit as st
 import fitz  # PyMuPDF
 import re
@@ -23,7 +23,7 @@ def extraer_datos(texto):
                         nombre = posible_nombre
                         break
             break
-
+# - BY ISMAEL LEON
     nombre_final = f"LIQUIDACIONES_{mes}_{rut}_{nombre.upper().replace(' ', '_')}.pdf"
     return nombre_final, lineas
 
@@ -68,13 +68,13 @@ if archivo:
             file_name="LIQUIDACIONES_SEPARADAS.zip",
             mime="application/zip"
         )
-
+# - BY ISMAEL LEON
         if mostrar_texto:
             st.subheader("📝 Texto extraído por página")
             for i, (nombre_archivo, texto) in enumerate(textos_extraidos, start=1):
                 st.markdown(f"**Página {i}: {nombre_archivo}**")
                 st.text(texto)
 
-# 👣 Footer opcional
+# 👣 Footer opcional  - BY ISMAEL LEON
 st.markdown("<hr style='margin-top:40px;'>", unsafe_allow_html=True)
 st.markdown("Desarrollado por Ismael León – © 2025", unsafe_allow_html=True)
