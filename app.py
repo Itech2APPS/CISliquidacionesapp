@@ -74,3 +74,7 @@ if archivo:
             for i, (nombre_archivo, texto) in enumerate(textos_extraidos, start=1):
                 st.markdown(f"**Página {i}: {nombre_archivo}**")
                 st.text(texto)
+
+# 👣 Footer opcional
+st.markdown("<hr style='margin-top:40px;'>", unsafe_allow_html=True)
+st.markdown("Desarrollado por Ismael León – © 2025", unsafe_allow_html=True)
